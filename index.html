@@ -1,0 +1,78 @@
+<!doctype html>
+<html amp>
+
+<head>
+    <meta charset="utf-8">
+    <title>AMP #0</title>
+    <link rel="canonical" href="amps.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <style amp-custom>
+        #pointContainer {
+            padding: 0;
+            text-align: center;
+        }
+
+        #pointContainer li {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: solid 2px #ff5e00;
+            background-color: #fff;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            display: inline-block;
+            margin: 0 3px;
+        }
+
+        #pointContainer.active0> :nth-child(1) {
+            background-color: #ff5e00;
+        }
+
+        #pointContainer.active1> :nth-child(2) {
+            background-color: #ff5e00;
+        }
+
+        #pointContainer.active2> :nth-child(3) {
+            background-color: #ff5e00;
+        }
+
+        #pointContainer.active3> :nth-child(4) {
+            background-color: #ff5e00;
+        }
+
+        #pointContainer.active4> :nth-child(5) {
+            background-color: #ff5e00;
+        }
+
+
+    </style>
+
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+
+<body>
+
+    <amp-carousel width=400 height=300 layout=responsive type=slides controls on="slideChange:AMP.setState({activeCarouselItem: event.index})">
+        <amp-img src="img/unsplash-0.jpg" width=400 height=300 layout=responsive></amp-img>
+        <amp-img src="img/unsplash-1.jpg" width=400 height=300 layout=responsive></amp-img>
+        <amp-img src="img/unsplash-2.jpg" width=400 height=300 layout=responsive></amp-img>
+        <amp-img src="img/unsplash-3.jpg" width=400 height=300 layout=responsive></amp-img>
+        <amp-img src="img/unsplash-4.jpg" width=400 height=300 layout=responsive></amp-img>
+    </amp-carousel>
+
+    <ul id="pointContainer" [class]="'active' + activeCarouselItem" class="active0">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</body>
+
+</html>
